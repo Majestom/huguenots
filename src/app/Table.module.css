@@ -10,11 +10,18 @@
 }
 
 .tableHeaderLeft {
+  padding: 12px 15px;
   background-color: #335776;
   color: #fff;
 }
 
 .tableHeaderRight {
+  padding: 12px 15px;
   background-color: #063156;
   color: #fff;
+}
+
+.cells {
+  padding: 10px 15px;
+  font-style: "Roboto", sans-serif;
 }

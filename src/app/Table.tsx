@@ -21,11 +21,18 @@ export function Table({ data }: { data: TableData }) {
         </tr>
       </thead>
       <tbody>
-        {data.rows.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            {row.map((cell, cellIndex) => (
-              <td key={cellIndex}>{cell.value}</td>
-            ))}
+        {data.rows.map((row) => (
+          <tr key={row[0].value}>
+            {row.map(({ columnKey, value }) => {
+              return (
+                <td
+                  key={columnKey}
+                  className={styles.cells}
+                >
+                  {value}
+                </td>
+              );
+            })}
           </tr>
         ))}
       </tbody>
