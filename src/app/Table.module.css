@@ -1,0 +1,20 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+  border-radius: 10px;
+  border: 1px solid #f2f5f9;
+}
+
+.tableHeaderLeft {
+  background-color: #335776;
+  color: #fff;
+}
+
+.tableHeaderRight {
+  background-color: #063156;
+  color: #fff;
+}

@@ -1,0 +1,89 @@
+{
+  "headers":[
+    {
+      "name":"Fund Name",
+      "key":"fundName",
+      "position":"left"
+    },
+    {
+      "name":"Primary Ticker",
+      "key":"primaryTicker",
+      "position":"left"
+    },
+    {
+      "name":"Income Treatment",
+      "key":"incomeTreatment",
+      "position":"left"
+    },
+    {
+      "name":"Share Class Currency",
+      "key":"shareClassCurrency",
+      "position":"left"
+    },
+    {
+      "name":"ISIN",
+      "key":"isin",
+      "position":"right"
+    },
+    {
+      "name":"Strategy",
+      "key":"strategy",
+      "position":"right"
+    },
+    {
+      "name":"Asset Class",
+      "key":"assetClass",
+      "position":"right"
+    },
+    {
+      "name":"Region",
+      "key":"region",
+      "position":"right"
+    },
+    {
+      "name":"Style",
+      "key":"style",
+      "position":"right"
+    }
+  ],
+  "rows":[
+    [
+      {
+        "columnKey":"fundName",
+        "value":"NASDAQ Cybersecurity UCITS ETF"
+      },
+      {
+        "columnKey":"primaryTicker",
+        "value":"CBRS"
+      },
+      {
+        "columnKey":"incomeTreatment",
+        "value":"Acc"
+      },
+      {
+        "columnKey":"shareClassCurrency",
+        "value":"EUR"
+      },
+      {
+        "columnKey":"isin",
+        "value":"IE00BF16M727"
+      },
+      {
+        "columnKey":"strategy",
+        "value":"Thematic"
+      },
+      {
+        "columnKey":"assetClass",
+        "value":"Equity"
+      },
+      {
+        "columnKey":"region",
+        "value":"Global"
+      },
+      {
+        "columnKey":"style",
+        "value":"Active"
+      }
+    ]
+  ]
+}
