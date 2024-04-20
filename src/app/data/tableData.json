@@ -1,88 +1,430 @@
 {
-  "headers":[
+  "headers": [
     {
-      "name":"Fund Name",
-      "key":"fundName",
-      "position":"left"
+      "name": "Fund Name",
+      "key": "fundName",
+      "position": "left"
     },
     {
-      "name":"Primary Ticker",
-      "key":"primaryTicker",
-      "position":"left"
+      "name": "Primary Ticker",
+      "key": "primaryTicker",
+      "position": "left"
     },
     {
-      "name":"Income Treatment",
-      "key":"incomeTreatment",
-      "position":"left"
+      "name": "Income Treatment",
+      "key": "incomeTreatment",
+      "position": "left"
     },
     {
-      "name":"Share Class Currency",
-      "key":"shareClassCurrency",
-      "position":"left"
+      "name": "Share Class Currency",
+      "key": "shareClassCurrency",
+      "position": "left"
     },
     {
-      "name":"ISIN",
-      "key":"isin",
-      "position":"right"
+      "name": "ISIN",
+      "key": "isin",
+      "position": "right"
     },
     {
-      "name":"Strategy",
-      "key":"strategy",
-      "position":"right"
+      "name": "Strategy",
+      "key": "strategy",
+      "position": "right"
     },
     {
-      "name":"Asset Class",
-      "key":"assetClass",
-      "position":"right"
+      "name": "Asset Class",
+      "key": "assetClass",
+      "position": "right"
     },
     {
-      "name":"Region",
-      "key":"region",
-      "position":"right"
+      "name": "Region",
+      "key": "region",
+      "position": "right"
     },
     {
-      "name":"Style",
-      "key":"style",
-      "position":"right"
+      "name": "Style",
+      "key": "style",
+      "position": "right"
     }
   ],
-  "rows":[
+  "rows": [
     [
       {
-        "columnKey":"fundName",
-        "value":"NASDAQ Cybersecurity UCITS ETF"
+        "columnKey": "fundName",
+        "value": "NASDAQ Cybersecurity UCITS ETF"
       },
       {
-        "columnKey":"primaryTicker",
-        "value":"CBRS"
+        "columnKey": "primaryTicker",
+        "value": "CBRS"
       },
       {
-        "columnKey":"incomeTreatment",
-        "value":"Acc"
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
       },
       {
-        "columnKey":"shareClassCurrency",
-        "value":"EUR"
+        "columnKey": "shareClassCurrency",
+        "value": "EUR"
       },
       {
-        "columnKey":"isin",
-        "value":"IE00BF16M727"
+        "columnKey": "isin",
+        "value": "IEOOBF16M727"
       },
       {
-        "columnKey":"strategy",
-        "value":"Thematic"
+        "columnKey": "strategy",
+        "value": "Thematic"
       },
       {
-        "columnKey":"assetClass",
-        "value":"Equity"
+        "columnKey": "assetClass",
+        "value": "Equity"
       },
       {
-        "columnKey":"region",
-        "value":"Global"
+        "columnKey": "region",
+        "value": "Global"
       },
       {
-        "columnKey":"style",
-        "value":"Active"
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "Cloud Computing UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "SKYE"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "GBP"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IEOOBFD2H405"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "Nasdaq® Clean Edge® Green Energy UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "QCLN"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "EUR"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IEOOBDBRT036"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "Indxx Innovative Transaction & Process UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "BLOK"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "EUR"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IEOOBF5DXP42"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "Dow Jones Internet UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FDNE"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "EUR"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IEOOBGOSSC32"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "United States"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "Dow Jones International Internet UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FDNI"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "EUR"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IE00BT9PVG14"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "NYSE Arca Biotechnology UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FBT"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "USD"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IEOOBLOL0H60"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "Developed"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "IPOX® Europe Equity Opportunities UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "EFPX"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "EUR"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IE00BFD26097"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "Europe"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "US Equity Opportunities UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FPXU"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "USD"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IEOOBYTH6238"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Thematic"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Equity"
+      },
+      {
+        "columnKey": "region",
+        "value": "United States"
+      },
+      {
+        "columnKey": "style",
+        "value": "Active"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "FactorFX UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FXEU"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "EUR (H)"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IE00BKS2X317"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Index"
       }
     ]
   ]
