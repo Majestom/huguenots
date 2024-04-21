@@ -38,6 +38,13 @@
   gap: 1rem;
 }
 
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .searchBarHolder {
   display: flex;
   align-items: center;

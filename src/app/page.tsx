@@ -1,12 +1,30 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { Table } from "./Table";
 import tableData from "./data/tableData.json";
+import { Column } from "./types";
+import { Dropdown } from "./Dropdown";
+import { Table } from "./Table";
 import styles from "./page.module.css";
+
+const filterOptions = tableData.headers.map(
+  (header: Column) => header.name
+);
+
+const strategyOptions = [
+  "Thematic",
+  "Factors",
+  "Equity Income",
+  "Capital Strength",
+  "Currency Hedge",
+  "ESG",
+];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [initialFilterState, setInitialFilterState] =
+    useState(strategyOptions);
+
   return (
     <main className={styles.main}>
       <menu className={`${styles.menu} ${styles.padding}`}>
@@ -46,6 +64,16 @@ export default function Home() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
+      </section>
+      <section
+        className={`${styles.filterContainer} ${styles.padding}`}
+      >
+        <Dropdown
+          filterName={"Strategy"}
+          selectedOptions={initialFilterState}
+          setSelectedOptions={setInitialFilterState}
+          options={strategyOptions}
+        />
       </section>
       <section
         className={`${styles.tableContainer} ${styles.padding}`}
