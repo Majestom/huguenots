@@ -464,6 +464,82 @@
         "columnKey": "style",
         "value": "Index"
       }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "FactorFX UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FXGB"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "GBP (H)"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IE00BD5HBR05"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Index"
+      }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "Low Duration Global Government Bond UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FSOV"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Dist"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "EUR"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IE00BKS2X317"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Index"
+      }
     ]
   ]
 }
