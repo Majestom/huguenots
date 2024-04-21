@@ -12,6 +12,7 @@
   background-color: #ffff;
   color: black;
   min-width: 200px;
+  cursor: pointer;
 }
 
 .dropdownAndButton {

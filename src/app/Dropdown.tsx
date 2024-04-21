@@ -13,8 +13,6 @@ export function Dropdown({
   filterName: string;
 }) {
   const [open, setOpen] = useState(false);
-  // const [selectedOptions, setSelectedOptions] =
-  //   useState<string[]>(options);
 
   return (
     <>

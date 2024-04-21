@@ -14,16 +14,22 @@ const filterOptions = tableData.headers.map(
 const strategyOptions = [
   "Thematic",
   "Factors",
-  "Equity Income",
+  "Fixed Income",
   "Capital Strength",
   "Currency Hedge",
   "ESG",
 ];
 
+const styleOptions = ["Active", "Index"];
+
+const filters = {
+  Strategy: strategyOptions,
+  Style: styleOptions,
+};
+
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [initialFilterState, setInitialFilterState] =
-    useState(strategyOptions);
+  const [filter, setFilter] = useState(filters);
 
   return (
     <main className={styles.main}>
@@ -70,15 +76,25 @@ export default function Home() {
       >
         <Dropdown
           filterName={"Strategy"}
-          selectedOptions={initialFilterState}
-          setSelectedOptions={setInitialFilterState}
+          selectedOptions={filter["Strategy"]}
+          setSelectedOptions={(options: string[]) =>
+            setFilter({ ...filter, Strategy: options })
+          }
           options={strategyOptions}
+        />
+        <Dropdown
+          filterName={"Style"}
+          selectedOptions={filter["Style"]}
+          setSelectedOptions={(options: string[]) =>
+            setFilter({ ...filter, Style: options })
+          }
+          options={styleOptions}
         />
       </section>
       <section
         className={`${styles.tableContainer} ${styles.padding}`}
       >
-        <Table data={tableData} />
+        <Table data={tableData} filter={filter} />
       </section>
     </main>
   );

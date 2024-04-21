@@ -1,7 +1,27 @@
-import { TableData } from "./types";
+import { TableProps } from "./types";
 import styles from "./Table.module.css";
 
-export function Table({ data }: { data: TableData }) {
+export function Table({ data, filter }: TableProps) {
+  const filteredData = data.rows.filter((row) => {
+    const relevantCells = row.filter(
+      ({ columnKey, value }) => {
+        const columnLabel =
+          data.headers.find(
+            (header) => header.key === columnKey
+          )?.name || "";
+
+        return filter[columnLabel]?.includes(value);
+      }
+    );
+    if (
+      relevantCells.length === Object.keys(filter).length
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
   return (
     <table className={styles.table}>
       <thead>
@@ -21,20 +41,22 @@ export function Table({ data }: { data: TableData }) {
         </tr>
       </thead>
       <tbody>
-        {data.rows.map((row) => (
-          <tr key={row[0].value}>
-            {row.map(({ columnKey, value }) => {
-              return (
-                <td
-                  key={columnKey}
-                  className={styles.cells}
-                >
-                  {value}
-                </td>
-              );
-            })}
-          </tr>
-        ))}
+        {filteredData.map((row) => {
+          return (
+            <tr key={row[0].value}>
+              {row.map(({ columnKey, value }) => {
+                return (
+                  <td
+                    key={columnKey}
+                    className={styles.cells}
+                  >
+                    {value}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

@@ -13,3 +13,8 @@ export type TableData = {
   headers: Column[];
   rows: Cell[][];
 };
+
+export type TableProps = {
+  data: TableData;
+  filter: Record<string, string[]>;
+};
