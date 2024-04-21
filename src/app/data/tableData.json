@@ -426,6 +426,44 @@
         "columnKey": "style",
         "value": "Index"
       }
+    ],
+    [
+      {
+        "columnKey": "fundName",
+        "value": "FactorFX UCITS ETF"
+      },
+      {
+        "columnKey": "primaryTicker",
+        "value": "FTFX"
+      },
+      {
+        "columnKey": "incomeTreatment",
+        "value": "Acc"
+      },
+      {
+        "columnKey": "shareClassCurrency",
+        "value": "USD"
+      },
+      {
+        "columnKey": "isin",
+        "value": "IE00BD5HBQ97"
+      },
+      {
+        "columnKey": "strategy",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "assetClass",
+        "value": "Fixed Income"
+      },
+      {
+        "columnKey": "region",
+        "value": "Global"
+      },
+      {
+        "columnKey": "style",
+        "value": "Index"
+      }
     ]
   ]
 }
