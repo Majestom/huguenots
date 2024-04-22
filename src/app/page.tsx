@@ -110,7 +110,9 @@ export default function Home() {
       <section
         className={`${styles.searchContainer} ${styles.padding}`}
       >
-        <h1>Product Finder</h1>
+        <h1 className={styles.mainHeader}>
+          Product Finder
+        </h1>
         <div className={styles.searchBarHolder}>
           <Image
             src={"/ionic-md-search.svg"}
@@ -118,7 +120,7 @@ export default function Home() {
             height={20}
             alt={"Search icon"}
           />
-          <h2>SEARCH</h2>
+          <h2 className={styles.searchHeader}>SEARCH</h2>
           <input
             className={styles.search}
             type="text"
