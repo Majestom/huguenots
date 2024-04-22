@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { FilterType } from "./types";
 import tableData from "./data/tableData.json";
+import { TopMenu } from "./TopMenu";
 import { Dropdown } from "./Dropdown";
 import { Table } from "./Table";
 import styles from "./page.module.css";
@@ -29,23 +30,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <menu className={`${styles.menu} ${styles.padding}`}>
-        <Image
-          src={"/Huguenots_mark.svg"}
-          width={37}
-          height={37}
-          alt={"Huguenots logo"}
-        />
-        <figure className={styles.avatar}>
-          <Image
-            src={"/british_flag.png"}
-            width={20}
-            height={20}
-            alt={"British flag 1707-1800"}
-          />
-          <figcaption>Professional investor</figcaption>
-        </figure>
-      </menu>
+      <TopMenu />
       <section
         className={`${styles.searchContainer} ${styles.padding}`}
       >
