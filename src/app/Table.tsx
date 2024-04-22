@@ -1,25 +1,56 @@
-import { TableProps } from "./types";
+import { TableProps, TableData, Cell } from "./types";
 import styles from "./Table.module.css";
 
-export function Table({ data, filter }: TableProps) {
-  const filteredData = data.rows.filter((row) => {
-    const relevantCells = row.filter(
-      ({ columnKey, value }) => {
-        const columnLabel =
-          data.headers.find(
-            (header) => header.key === columnKey
-          )?.name || "";
+function filterTableData({
+  tableData,
+  filterData,
+}: {
+  tableData: TableData;
+  filterData: Record<string, string[]>;
+}) {
+  return tableData.rows.filter((row) => {
+    return row.every((cell) => {
+      const columnLabel =
+        tableData.headers.find(
+          (header) => header.key === cell.columnKey
+        )?.name || "";
 
-        return filter[columnLabel]?.includes(value);
+      if (!filterData.hasOwnProperty(columnLabel)) {
+        return true;
       }
-    );
-    if (
-      relevantCells.length === Object.keys(filter).length
-    ) {
-      return true;
-    } else {
-      return false;
-    }
+      return filterData[columnLabel].includes(cell.value);
+    });
+  });
+}
+
+function searchTableData({
+  rows,
+  searchTerm,
+}: {
+  rows: Cell[][];
+  searchTerm: string;
+}) {
+  return rows.filter((row) => {
+    return row.some((cell) => {
+      return cell.value.toLowerCase().includes(searchTerm);
+    });
+  });
+}
+
+export function Table({
+  data,
+  filter,
+  nameSearchTerm,
+}: TableProps) {
+  const filteredData = filterTableData({
+    tableData: data,
+    filterData: filter,
+  });
+
+  const searchTerm = nameSearchTerm.toLowerCase();
+  const filteredDataWithSearch = searchTableData({
+    rows: filteredData,
+    searchTerm,
   });
 
   return (
@@ -41,9 +72,9 @@ export function Table({ data, filter }: TableProps) {
         </tr>
       </thead>
       <tbody>
-        {filteredData.map((row) => {
+        {filteredDataWithSearch.map((row) => {
           return (
-            <tr key={row[0].value}>
+            <tr key={row[1].value}>
               {row.map(({ columnKey, value }) => {
                 return (
                   <td
