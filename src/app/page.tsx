@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { FilterType } from "./types";
 import tableData from "./data/tableData.json";
 import { Dropdown } from "./Dropdown";
 import { Table } from "./Table";
@@ -17,14 +18,14 @@ const strategyOptions = [
 
 const styleOptions = ["Active", "Index"];
 
-const filters = {
+const filters: FilterType = {
   Strategy: strategyOptions,
   Style: styleOptions,
 };
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filter, setFilter] = useState(filters);
+  const [filter, setFilter] = useState<FilterType>(filters);
 
   return (
     <main className={styles.main}>
@@ -69,22 +70,22 @@ export default function Home() {
       <section
         className={`${styles.filterContainer} ${styles.padding}`}
       >
-        <Dropdown
-          filterName={"Strategy"}
-          selectedOptions={filter["Strategy"]}
-          setSelectedOptions={(options: string[]) =>
-            setFilter({ ...filter, Strategy: options })
-          }
-          options={strategyOptions}
-        />
-        <Dropdown
-          filterName={"Style"}
-          selectedOptions={filter["Style"]}
-          setSelectedOptions={(options: string[]) =>
-            setFilter({ ...filter, Style: options })
-          }
-          options={styleOptions}
-        />
+        {Object.keys(filter).map((filterName) => {
+          return (
+            <Dropdown
+              key={filterName}
+              filterName={filterName}
+              selectedOptions={filter[filterName]}
+              setSelectedOptions={(options: string[]) =>
+                setFilter({
+                  ...filter,
+                  [filterName]: options,
+                })
+              }
+              options={filters[filterName]}
+            />
+          );
+        })}
       </section>
       <section
         className={`${styles.tableContainer} ${styles.padding}`}

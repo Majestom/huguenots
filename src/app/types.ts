@@ -19,3 +19,7 @@ export type TableProps = {
   filter: Record<string, string[]>;
   nameSearchTerm: string;
 };
+
+export type FilterType = {
+  [key: string]: string[];
+};
