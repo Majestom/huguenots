@@ -6,7 +6,6 @@ import tableData from "./data/tableData.json";
 import { TopMenu } from "./TopMenu";
 import { Dropdown } from "./Dropdown";
 import { Table } from "./Table";
-import { BottomMenu } from "./BottomMenu";
 import styles from "./page.module.css";
 
 const strategyOptions = [
@@ -121,7 +120,6 @@ export default function Home() {
           nameSearchTerm={searchTerm}
         />
       </section>
-      <BottomMenu />
     </main>
   );
 }
