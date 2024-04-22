@@ -34,3 +34,21 @@
   top: 0;
   padding: 0.5rem 1rem;
 }
+
+.arrowUp,
+.arrowDown {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border: 2px solid #ed6b1f;
+  border-width: 2px 2px 0 0;
+}
+
+.arrowUp {
+  transform: rotate(-45deg);
+}
+
+.arrowDown {
+  transform: rotate(135deg);
+}

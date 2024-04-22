@@ -22,6 +22,11 @@ export function Dropdown({
           onClick={() => setOpen(!open)}
         >
           {filterName}
+          <span
+            className={
+              open ? styles.arrowUp : styles.arrowDown
+            }
+          />
         </button>
         {open && (
           <div className={styles.dropdown}>
