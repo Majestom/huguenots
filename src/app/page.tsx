@@ -19,9 +19,20 @@ const strategyOptions = [
 
 const styleOptions = ["Active", "Index"];
 
+const assetClassOptions = ["Equity", "Fixed Income"];
+
+const marketAndRegion = [
+  "Global",
+  "United States",
+  "Europe",
+  "Developed",
+];
+
 const filters: FilterType = {
   Strategy: strategyOptions,
   Style: styleOptions,
+  "Market & Region": marketAndRegion,
+  "Asset Class": assetClassOptions,
 };
 
 export default function Home() {
@@ -65,6 +76,28 @@ export default function Home() {
             })
           }
           options={filters["Strategy"]}
+        />
+        <Dropdown
+          filterName={"Asset Class"}
+          selectedOptions={filter["Asset Class"]}
+          setSelectedOptions={(options: string[]) =>
+            setFilter({
+              ...filter,
+              ["Asset Class"]: options,
+            })
+          }
+          options={filters["Asset Class"]}
+        />
+        <Dropdown
+          filterName={"Market & Region"}
+          selectedOptions={filter["Market & Region"]}
+          setSelectedOptions={(options: string[]) =>
+            setFilter({
+              ...filter,
+              ["Market & Region"]: options,
+            })
+          }
+          options={filters["Market & Region"]}
         />
         <Dropdown
           filterName={"Style"}
