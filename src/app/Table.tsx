@@ -74,12 +74,20 @@ export function Table({
       <tbody>
         {filteredDataWithSearch.map((row) => {
           return (
-            <tr key={row[1].value}>
-              {row.map(({ columnKey, value }) => {
+            <tr key={row[1].value} className={styles.rows}>
+              {row.map(({ columnKey, value }, i) => {
                 return (
                   <td
                     key={columnKey}
-                    className={styles.cells}
+                    className={`${styles.cells} ${
+                      i === 0 ? styles.firstColumn : ""
+                    } ${
+                      i === 1 || i === 2 || i === 3
+                        ? styles.hasMaxWidth
+                        : ""
+                    }
+                    ${i === 3 ? styles.fourthColumn : ""}
+                    `}
                   >
                     {value}
                   </td>

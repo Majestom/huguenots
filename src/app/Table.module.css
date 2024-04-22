@@ -6,22 +6,43 @@
   font-family: "Roboto", sans-serif;
   color: #444;
   border-radius: 10px;
-  border: 1px solid #f2f5f9;
 }
 
 .tableHeaderLeft {
+  font: normal 15px "Roboto", sans-serif;
+  text-align: left;
   padding: 12px 15px;
   background-color: #335776;
   color: #fff;
 }
 
 .tableHeaderRight {
+  font: normal 15px "Roboto", sans-serif;
+  text-align: center;
   padding: 12px 15px;
   background-color: #063156;
   color: #fff;
 }
 
+.rows:hover {
+  background-color: #f9f9f9;
+}
+
 .cells {
-  padding: 10px 15px;
-  font-style: "Roboto", sans-serif;
+  font: normal 15px "Roboto", sans-serif;
+  padding: 10px 25px;
+  border-bottom: 1px solid #e3e2e2;
+  text-align: left;
+}
+
+.firstColumn {
+  color: #335776;
+}
+
+.hasMaxWidth {
+  width: 120px;
+}
+
+.fourthColumn {
+  border-right: 1px solid #e3e2e2;
 }
