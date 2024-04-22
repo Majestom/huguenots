@@ -105,12 +105,6 @@ const filters: FilterType = {
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState<FilterType>(filters);
-  const [
-    marketAndRegionGroupState,
-    setMarketAndRegionGroupState,
-  ] = useState(marketAndRegionGroup);
-  const [assetClassGroupState, setAssetClassGroupState] =
-    useState(assetClassGroup);
 
   return (
     <main className={styles.main}>
@@ -151,7 +145,7 @@ export default function Home() {
           options={filters["Strategy"]}
         />
         <DropdownFancy
-          groups={assetClassGroupState}
+          groups={assetClassGroup}
           selectedOptions={filter["Asset Class"]}
           setSelectedOptions={(options: string[]) =>
             setFilter({
@@ -162,7 +156,7 @@ export default function Home() {
           filterName={"Asset Class"}
         />
         <DropdownFancy
-          groups={marketAndRegionGroupState}
+          groups={marketAndRegionGroup}
           selectedOptions={filter["Region"]}
           setSelectedOptions={(options: string[]) =>
             setFilter({
