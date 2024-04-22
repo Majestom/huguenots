@@ -31,6 +31,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
+  background-color: #f8f9fa;
 }
 
 .filterContainer {
@@ -39,6 +40,7 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
+  background-color: #f8f9fa;
 }
 
 .searchBarHolder {
@@ -61,7 +63,7 @@
   appearance: none;
   background: none;
   outline: none;
-  background-color: #dddddd;
+  background-color: #f8f9fa;
   font-style: italic;
 }
 
