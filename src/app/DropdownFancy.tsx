@@ -31,7 +31,7 @@ export function DropdownFancy({
       <div className={styles.dropdownAndButton}>
         <button
           className={styles.filterButton}
-          onMouseOver={() => setOpen(!open)}
+          onClick={() => setOpen(!open)}
         >
           {filterName}
           <span
