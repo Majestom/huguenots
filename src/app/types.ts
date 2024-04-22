@@ -17,4 +17,5 @@ export type TableData = {
 export type TableProps = {
   data: TableData;
   filter: Record<string, string[]>;
+  nameSearchTerm: string;
 };
