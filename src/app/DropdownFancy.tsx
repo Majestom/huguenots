@@ -63,19 +63,33 @@ export function DropdownFancy({
                             selectedOptions.filter(
                               (selectedOption) =>
                                 selectedOption !==
-                                option.label
+                                  option.label &&
+                                (!option.subOptions ||
+                                  !option.subOptions
+                                    .map(
+                                      (subOption) =>
+                                        subOption.label
+                                    )
+                                    .includes(
+                                      selectedOption
+                                    ))
                             )
                           );
                         } else {
                           setSelectedOptions([
                             ...selectedOptions,
                             option.label,
+                            ...(option.subOptions
+                              ? option.subOptions.map(
+                                  (subOption) =>
+                                    subOption.label
+                                )
+                              : []),
                           ]);
                         }
                       }}
                     />
                     {option.label}
-
                     {option.subOptions && (
                       <div style={{ paddingLeft: "20px" }}>
                         {option.subOptions.map(
@@ -104,6 +118,7 @@ export function DropdownFancy({
                                     setSelectedOptions([
                                       ...selectedOptions,
                                       subOption.label,
+                                      option.label,
                                     ]);
                                   }
                                 }}
