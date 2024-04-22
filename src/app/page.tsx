@@ -31,7 +31,7 @@ const marketAndRegion = [
 const filters: FilterType = {
   Strategy: strategyOptions,
   Style: styleOptions,
-  "Market & Region": marketAndRegion,
+  Region: marketAndRegion,
   "Asset Class": assetClassOptions,
 };
 
@@ -90,14 +90,14 @@ export default function Home() {
         />
         <Dropdown
           filterName={"Market & Region"}
-          selectedOptions={filter["Market & Region"]}
+          selectedOptions={filter["Region"]}
           setSelectedOptions={(options: string[]) =>
             setFilter({
               ...filter,
-              ["Market & Region"]: options,
+              ["Region"]: options,
             })
           }
-          options={filters["Market & Region"]}
+          options={filters["Region"]}
         />
         <Dropdown
           filterName={"Style"}
