@@ -24,7 +24,6 @@ const marketAndRegionGroup = [
       { label: "Asia Pacific" },
       {
         label: "Europe",
-        selected: true,
         subOptions: [
           { label: "Eurozone" },
           { label: "Germany" },
@@ -35,7 +34,6 @@ const marketAndRegionGroup = [
       { label: "Global" },
       {
         label: "North America",
-        selected: true,
         subOptions: [{ label: "United States" }],
       },
     ],
