@@ -55,22 +55,28 @@ export default function Home() {
       <section
         className={`${styles.filterContainer} ${styles.padding}`}
       >
-        {Object.keys(filter).map((filterName) => {
-          return (
-            <Dropdown
-              key={filterName}
-              filterName={filterName}
-              selectedOptions={filter[filterName]}
-              setSelectedOptions={(options: string[]) =>
-                setFilter({
-                  ...filter,
-                  [filterName]: options,
-                })
-              }
-              options={filters[filterName]}
-            />
-          );
-        })}
+        <Dropdown
+          filterName={"Strategy"}
+          selectedOptions={filter["Strategy"]}
+          setSelectedOptions={(options: string[]) =>
+            setFilter({
+              ...filter,
+              ["Strategy"]: options,
+            })
+          }
+          options={filters["Strategy"]}
+        />
+        <Dropdown
+          filterName={"Style"}
+          selectedOptions={filter["Style"]}
+          setSelectedOptions={(options: string[]) =>
+            setFilter({
+              ...filter,
+              ["Style"]: options,
+            })
+          }
+          options={filters["Style"]}
+        />
       </section>
       <section
         className={`${styles.tableContainer} ${styles.padding}`}
