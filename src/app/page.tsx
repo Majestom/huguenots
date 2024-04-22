@@ -25,7 +25,6 @@ const filters = {
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(filters);
-  const [data, setData] = useState(tableData);
 
   return (
     <main className={styles.main}>
