@@ -19,7 +19,7 @@ export function Dropdown({
       <div className={styles.dropdownAndButton}>
         <button
           className={styles.filterButton}
-          onClick={() => setOpen(!open)}
+          onMouseOver={() => setOpen(!open)}
         >
           {filterName}
           <span
