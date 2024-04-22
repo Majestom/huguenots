@@ -2,14 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import tableData from "./data/tableData.json";
-import { Column } from "./types";
 import { Dropdown } from "./Dropdown";
 import { Table } from "./Table";
 import styles from "./page.module.css";
-
-const filterOptions = tableData.headers.map(
-  (header: Column) => header.name
-);
 
 const strategyOptions = [
   "Thematic",
@@ -30,6 +25,7 @@ const filters = {
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(filters);
+  const [data, setData] = useState(tableData);
 
   return (
     <main className={styles.main}>
@@ -94,7 +90,11 @@ export default function Home() {
       <section
         className={`${styles.tableContainer} ${styles.padding}`}
       >
-        <Table data={tableData} filter={filter} />
+        <Table
+          data={tableData}
+          filter={filter}
+          nameSearchTerm={searchTerm}
+        />
       </section>
     </main>
   );
