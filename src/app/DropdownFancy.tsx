@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./Dropdown.module.css";
+import styles from "./DropdownFancy.module.css";
 
 export type Option = {
   label: string;
@@ -44,9 +44,14 @@ export function DropdownFancy({
           <div className={styles.dropdown}>
             {groups.map((group) => (
               <div key={group.label}>
-                <h3>{group.label}</h3>
+                <h3 className={styles.inputHolder}>
+                  {group.label}
+                </h3>
                 {group.options.map((option) => (
-                  <div key={option.label}>
+                  <div
+                    key={option.label}
+                    className={styles.inputHolder}
+                  >
                     <input
                       className={styles.checkbox}
                       type="checkbox"
@@ -94,7 +99,10 @@ export function DropdownFancy({
                       <div style={{ paddingLeft: "20px" }}>
                         {option.subOptions.map(
                           (subOption) => (
-                            <div key={subOption.label}>
+                            <div
+                              key={subOption.label}
+                              className={styles.inputHolder}
+                            >
                               <input
                                 className={styles.checkbox}
                                 type="checkbox"
