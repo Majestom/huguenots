@@ -1,0 +1,63 @@
+.filterButton {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  outline: none;
+  background-color: #ffff;
+  color: black;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.dropdownAndButton {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.inputHolder {
+  position: relative;
+  right: 0;
+  top: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.arrowUp,
+.arrowDown {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border: 2px solid #ed6b1f;
+  border-width: 2px 2px 0 0;
+  transform-origin: center;
+}
+
+.arrowUp {
+  transform: rotate(-45deg);
+}
+
+.arrowDown {
+  transform: rotate(135deg);
+}
+
+.checkbox {
+  cursor: pointer;
+}

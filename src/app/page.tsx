@@ -5,9 +5,60 @@ import { FilterType } from "./types";
 import tableData from "./data/tableData.json";
 import { TopMenu } from "./TopMenu";
 import { Dropdown } from "./Dropdown";
+import { DropdownFancy } from "./DropdownFancy";
 import { Table } from "./Table";
 import { BottomMenu } from "./BottomMenu";
 import styles from "./page.module.css";
+
+const marketAndRegionGroup = [
+  {
+    label: "Market",
+    options: [
+      { label: "Developed" },
+      { label: "Emerging" },
+    ],
+  },
+  {
+    label: "Region",
+    options: [
+      { label: "Asia Pacific" },
+      {
+        label: "Europe",
+        selected: true,
+        subOptions: [
+          { label: "Eurozone" },
+          { label: "Germany" },
+          { label: "Switzerland" },
+          { label: "United Kingdom" },
+        ],
+      },
+      { label: "Global" },
+      {
+        label: "North America",
+        selected: true,
+        subOptions: [{ label: "United States" }],
+      },
+    ],
+  },
+];
+
+const assetClassGroup = [
+  {
+    label: "Equity",
+    options: [
+      { label: "All Cap" },
+      { label: "Large Cap" },
+      { label: "Small Cap" },
+    ],
+  },
+  {
+    label: "Fixed Income",
+    options: [
+      { label: "Government" },
+      { label: "Currency" },
+    ],
+  },
+];
 
 const strategyOptions = [
   "Thematic",
@@ -20,13 +71,28 @@ const strategyOptions = [
 
 const styleOptions = ["Active", "Index"];
 
-const assetClassOptions = ["Equity", "Fixed Income"];
+const assetClassOptions = [
+  "Equity",
+  "Fixed Income",
+  "All Cap",
+  "Large Cap",
+  "Small Cap",
+  "Government",
+  "Currency",
+];
 
 const marketAndRegion = [
   "Global",
   "United States",
   "Europe",
   "Developed",
+  "Emerging",
+  "Asia Pacific",
+  "North America",
+  "Eurozone",
+  "Germany",
+  "Switzerland",
+  "United Kingdom",
 ];
 
 const filters: FilterType = {
@@ -39,6 +105,12 @@ const filters: FilterType = {
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState<FilterType>(filters);
+  const [
+    marketAndRegionGroupState,
+    setMarketAndRegionGroupState,
+  ] = useState(marketAndRegionGroup);
+  const [assetClassGroupState, setAssetClassGroupState] =
+    useState(assetClassGroup);
 
   return (
     <main className={styles.main}>
@@ -78,8 +150,8 @@ export default function Home() {
           }
           options={filters["Strategy"]}
         />
-        <Dropdown
-          filterName={"Asset Class"}
+        <DropdownFancy
+          groups={assetClassGroupState}
           selectedOptions={filter["Asset Class"]}
           setSelectedOptions={(options: string[]) =>
             setFilter({
@@ -87,10 +159,10 @@ export default function Home() {
               ["Asset Class"]: options,
             })
           }
-          options={filters["Asset Class"]}
+          filterName={"Asset Class"}
         />
-        <Dropdown
-          filterName={"Market & Region"}
+        <DropdownFancy
+          groups={marketAndRegionGroupState}
           selectedOptions={filter["Region"]}
           setSelectedOptions={(options: string[]) =>
             setFilter({
@@ -98,7 +170,7 @@ export default function Home() {
               ["Region"]: options,
             })
           }
-          options={filters["Region"]}
+          filterName={"Market & Region"}
         />
         <Dropdown
           filterName={"Style"}
